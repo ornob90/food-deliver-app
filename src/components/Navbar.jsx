@@ -97,14 +97,16 @@ const Navbar = () => {
             : "fixed top-0 left-[-100%] w-[300px] h-screen bg-white z-10 duration-300"
         }
       >
-        <AiOutlineClose
-          onClick={() => setNav(!nav)}
-          size={30}
-          className="absolute right-4 cursor-pointer"
-        />
-        <h2 className="text-2xl p-4">
-          Best <span className="font-bold">Eats</span>
-        </h2>
+        <div className="flex justify-between items-center">
+          <AiOutlineClose
+            onClick={() => setNav(!nav)}
+            size={30}
+            className="absolute right-4 cursor-pointer"
+          />
+          <h2 className="text-2xl p-4">
+            Best <span className="font-bold">Eats</span>
+          </h2>
+        </div>
         <nav>
           <ul className="flex flex-col p-4 text-gray-800">
             {navLinks.map(({ id, icon, name }) => (
